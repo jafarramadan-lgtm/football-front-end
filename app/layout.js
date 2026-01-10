@@ -19,6 +19,9 @@ export const metadata = {
  title: 'أخبار كرة القدم',
   description: 'أفضل موقع لعرض نتائج وأخبار كرة القدم',
   keywords: 'كرة قدم, مباريات, نتائج, أخبار',
+  verification:{
+   google :"9ra37WCLYp1GTwRFdKSzi-y75EI2qAkYiGF3Zfa-428" 
+  }
 };
 
 export default function RootLayout({ children }) {
