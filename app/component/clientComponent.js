@@ -8,12 +8,14 @@ export default function Client({ init }) {
   const [last, setlast] = useState([]);
   const [live, setlive] = useState([]);
   const [will, setwill] = useState([]);
- console.log(init.Sections[0].Data.Competitions[3].Name)
+  console.log(init.Sections[0].Data.Competitions[3].Name);
   useEffect(() => {
     setInterval(() => {
-      axios.get("https://football-api-h80d.onrender.com/api/scores").then(function (response) {
-        setdata(response.data);
-      });
+      axios
+        .get("https://football-api-h80d.onrender.com/api/scores")
+        .then(function (response) {
+          setdata(response.data);
+        });
       setlast(() => {
         return init.Sections[0].Data.Games.filter(
           (m) => !m.Active && m.Completion === 100.0
@@ -67,13 +69,14 @@ export default function Client({ init }) {
           ) : (
             last.map((e) => {
               return (
-                <Link href={`/match/${e.ID}`} 
+                <Link
+                  href={`/match/${e.ID}`}
                   key={e.ID}
                   className="flex justify-around gap-7 shadow-sm shadow-gray-950 py-2 px-3.5 rounded-md bg-gray-900 mt-2.5"
                 >
                   <img
                     className="w-8 h-8 "
-                    src={`http://127.0.0.1:8000/api/slogan/${e.Comps[0].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[0].ID}`}
                   ></img>
                   <h1>{e.Comps[0].Name}</h1>
                   <p>{e.Scrs[0]}</p>
@@ -81,7 +84,7 @@ export default function Client({ init }) {
                   <h1>{e.Comps[1].Name}</h1>
                   <img
                     className="w-8 h-8 "
-                    src={`http://127.0.0.1:8000/api/slogan/${e.Comps[1].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[1].ID}`}
                   ></img>
                 </Link>
               );
@@ -102,13 +105,14 @@ export default function Client({ init }) {
               if (!live) return;
               else
                 return (
-                  <Link href={`/match/${e.ID}`}
+                  <Link
+                    href={`/match/${e.ID}`}
                     key={e.ID}
                     className="flex justify-around gap-7 py-2 px-3.5 rounded-md shadow-sm shadow-gray-950 bg-gray-900 mt-2.5 "
                   >
                     <img
                       className="w-8 h-8"
-                      src={`http://127.0.0.1:8000/api/slogan/${e.Comps[0].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[0].ID}`}
                     ></img>
 
                     <h1>{e.Comps[0].Name}</h1>
@@ -119,7 +123,7 @@ export default function Client({ init }) {
                     <h1>{e.Comps[1].Name}</h1>
                     <img
                       className="w-8 h-8"
-                      src={`http://127.0.0.1:8000/api/slogan/${e.Comps[1].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[1].ID}`}
                     ></img>
                   </Link>
                 );
@@ -144,20 +148,21 @@ export default function Client({ init }) {
           ) : (
             will.map((e) => {
               return (
-                <Link  href={`/match/${e.ID}`}
+                <Link
+                  href={`/match/${e.ID}`}
                   key={e.ID}
                   className="flex justify-around gap-7 py-2 px-3.5 rounded-md shadow-sm shadow-gray-950 bg-gray-900 mt-2.5"
                 >
                   <img
                     className="w-8 h-8 "
-                    src={`http://127.0.0.1:8000/api/slogan/${e.Comps[0].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[0].ID}`}
                   ></img>
                   <h1>{e.Comps[0].Name}</h1>
                   <p>{e.STime}</p>
                   <h1>{e.Comps[1].Name}</h1>
                   <img
                     className="w-8 h-8 "
-                    src={`http://127.0.0.1:8000/api/slogan/${e.Comps[1].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[1].ID}`}
                   ></img>
                 </Link>
               );

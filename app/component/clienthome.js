@@ -54,7 +54,7 @@ export default function Clienthome({ init }) {
                 >
                   <img
                     className="w-8 h-8 "
-                    src={`http://127.0.0.1:8000/api/slogan/${e.Comps[0].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[0].ID}`}
                   ></img>
                   <h1>{e.Comps[0].Name}</h1>
                   <p>{e.Scrs[0]}</p>
@@ -62,7 +62,7 @@ export default function Clienthome({ init }) {
                   <h1>{e.Comps[1].Name}</h1>
                   <img
                     className="w-8 h-8 "
-                    src={`http://127.0.0.1:8000/api/slogan/${e.Comps[1].ID}`}
+                    src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[1].ID}`}
                   ></img>
                 </Link>
               );
