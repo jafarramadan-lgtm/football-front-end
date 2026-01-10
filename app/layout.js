@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
- title: 'أخبار كرة القدم',
+ title: 'أخبار كرة القدم|365 Scors',
   description: 'أفضل موقع لعرض نتائج وأخبار كرة القدم',
-  keywords: 'كرة قدم, مباريات, نتائج, أخبار',
+  keywords: 'كرة قدم, مباريات, نتائج, أخبار,برشلونة ,ريال,دوري اسباني,كلاسيكو,بث مباشر,دوري انكليزي,رياضة,انتقالات,موسم,ميسي,رونالدو,كريستيانو,نيمار',
   verification:{
    google :"9ra37WCLYp1GTwRFdKSzi-y75EI2qAkYiGF3Zfa-428" 
   }
