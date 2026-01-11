@@ -12,7 +12,7 @@ export default async function match({ params }) {
       <div className="flex flex-col gap-10">
         <img
           className="w-15 h-15 "
-          src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[0].ID}`}
+          src={`https://football-api-h80d.onrender.com/api/slogan/${e[0].Comps[0].ID}`}
         ></img>
         <h1 className="text-3xl text-white font-bold italic ">
           {e[0].Comps[0].Name}
@@ -46,7 +46,7 @@ export default async function match({ params }) {
       <div className="flex flex-col gap-10">
         <img
           className="w-15 h-15 "
-          src={`https://football-api-h80d.onrender.com/api/slogan/${e.Comps[1].ID}`}
+          src={`https://football-api-h80d.onrender.com/api/slogan/${e[0].Comps[1].ID}`}
         ></img>
         <h1 className="text-3xl text-white font-bold italic ">
           {e[0].Comps[1].Name}
